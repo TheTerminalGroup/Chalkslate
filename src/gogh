@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+
+for ( $i = 0; $i < 8; $i++ ) {
+	print "\e[4$i", "m";
+	print "    ";
+}
+
+# Need to do \e[0m and then newline here.
+# Simply a newline i.e.: print "\n";
+# doesn't work correctly (try it).
+# We've seen this both in FbTerm and Xfce Terminal.
+print "\e[0m\n";
+
+for ( $i = 0; $i < 8; $i++ ) {
+	print "\e[10${i}m";
+	print "    ";
+}
+print "\e[0m\n";
+print "\n";
+for ( $i = 0; $i < 8; $i++ ) {
+	print "   ";
+	print "\e[3${i}m";
+	print "AaBbMmYyZz";
+	print "      ";
+	print "\e[9${i}m";
+	print "AaBbMmYyZz";
+	print "\n";
+}
+print "\e[0m\n";
+print "\$ \e[31msudo \e[32mapt \e[0minstall linux\n";

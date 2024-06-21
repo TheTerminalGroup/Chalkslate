@@ -1,0 +1,37 @@
+#!/usr/bin/perl -wn
+
+# Not using the variable scoping guidelines in this script because it is only a little more than one screenful.
+# If you take away the regexes in expanded mode, it will fit in one screenful.
+
+@dark = ('black', 'red', 'green', 'brown', 'blue', 'magenta', 'cyan', 'light gray');
+@light = ('dark gray', 'light red', 'light green', 'yellow', 'light blue', 'light magenta', 'light cyan', 'white');
+
+BEGIN {
+	@ARGV = ("/home/$ENV{USER}/.config/fbterm/fbtermrc");
+}
+
+/ ^
+  color-
+  (\d{1,2})		# colour number
+  =
+  ([0-9A-Fa-f]{6})	# hex RGB colour value
+  $
+/x and $hex_rgb{$1} = $2;
+
+/ ^
+  color-
+  (foreground|background)
+  =
+  (\d{1,2})		# colour number
+  $
+/x and ($1 eq 'foreground' and $fg = $2 or $bg = $2);
+
+END {
+	foreach $num (sort { $a <=> $b } keys %hex_rgb) {
+		$name = ($num >= 8 and $light[$num - 8] or $dark[$num]);
+		print "$num: $name: $hex_rgb{$num}";
+		$num == $fg and print " [foreground]";
+		$num == $bg and print " [background]";
+		print "\n";
+	}
+}

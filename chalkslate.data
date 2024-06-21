@@ -1,0 +1,16 @@
+0: black: 000000
+1: red: FF8484
+2: green: 99CC30
+3: brown: FF7744
+4: blue: 6E92F7
+5: magenta: CC68CC
+6: cyan: 33CFBB
+7: light gray: CCCCCC
+8: dark gray: 555555 [background]
+9: light red: FF9978
+10: light green: 58FF00
+11: yellow: FFFF1A
+12: light blue: 30CAFF
+13: light magenta: FF6AF4
+14: light cyan: 66FFDD
+15: white: FFFFFF [foreground]

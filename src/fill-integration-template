@@ -1,0 +1,65 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my %hex_rgb;	# hexadecimal RGB values
+my %dec_r;	# decimal R values
+my %dec_g;	# decimal G values
+my %dec_b;	# decimal B values
+my %fg_bg;	# foreground and background colour numbers
+
+open my $handle, '< :encoding(UTF-8)', 'chalkslate.data' or die;
+while ( <$handle> ) {
+	my ($num, undef, $val_attr) = split /:\s*/;
+	my ($val, $attr) = split /\s+/, $val_attr;
+	$hex_rgb{$num} = $val;
+
+	$dec_r{$num} = hex substr $val, 0, 2;
+	$dec_g{$num} = hex substr $val, 2, 2;
+	$dec_b{$num} = hex substr $val, 4, 2;
+
+	defined $attr or next;
+	$attr eq '[foreground]' and $fg_bg{'FG'} = $num;
+	$attr eq '[background]' and $fg_bg{'BG'} = $num;
+}
+close $handle or die;
+
+while ( <> ) {
+	# The order of substitution is important.
+	# COLOUR-N-LOWER, COLOUR-N-X_DEC, COLOUR-N-X_NORM have to be substituted before COLOUR-N.
+	# (N = 0, 1, 2, ..., 15 and N = FG, BG.
+	# X = R, G, B.)
+	# COLOUR-10, COLOUR-11, COLOUR-12, ..., COLOUR-15 have to be substituted before COLOUR-1.
+	# Otherwise, the latter will accidentally substitute the former.
+
+	foreach my $num ( keys %hex_rgb ) {
+		s/COLOUR-$num-LOWER/\L$hex_rgb{$num}/g;
+		s/COLOUR-$num-R_DEC/$dec_r{$num}/g;
+		s/COLOUR-$num-G_DEC/$dec_g{$num}/g;
+		s/COLOUR-$num-B_DEC/$dec_b{$num}/g;
+		s|COLOUR-$num-R_NORM|$dec_r{$num} / 255|ge;
+		s|COLOUR-$num-G_NORM|$dec_g{$num} / 255|ge;
+		s|COLOUR-$num-B_NORM|$dec_b{$num} / 255|ge;
+	}
+
+	foreach my $num ( grep { $_ >= 10 } keys %hex_rgb ) {
+		s/COLOUR-$num/$hex_rgb{$num}/g;
+	}
+	foreach my $num ( grep { $_ < 10 } keys %hex_rgb ) {
+		s/COLOUR-$num/$hex_rgb{$num}/g;
+	}
+
+	foreach my $g ( keys %fg_bg ) {
+		my $num = $fg_bg{$g};
+		s/COLOUR-$g-LOWER/\L$hex_rgb{$num}/g;
+		s/COLOUR-$g-R_DEC/$dec_r{$num}/g;
+		s/COLOUR-$g-G_DEC/$dec_g{$num}/g;
+		s/COLOUR-$g-B_DEC/$dec_b{$num}/g;
+		s|COLOUR-$g-R_NORM|$dec_r{$num} / 255|ge;
+		s|COLOUR-$g-G_NORM|$dec_g{$num} / 255|ge;
+		s|COLOUR-$g-B_NORM|$dec_b{$num} / 255|ge;
+		s/COLOUR-$g/$hex_rgb{$num}/g;
+	}
+
+	print;
+}
