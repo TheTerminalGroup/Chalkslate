@@ -1,0 +1,7 @@
+== Kitty
+
+Use the `themes` kitten:
+
+	$ kitty +kitten themes
+
+You should find Chalkslate among the listed themes.

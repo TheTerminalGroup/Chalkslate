@@ -1,0 +1,21 @@
+== Xfce Terminal
+
+. Create a directory:
++
+----
+$ mkdir -p ~/.local/share/xfce4/terminal/colorschemes
+----
+
+. Within this directory, create a file named `chalkslate.theme` with the following contents:
++
+----
+# Chalkslate
+# https://github.com/TheTerminalGroup/Chalkslate
+[Scheme]
+Name=Chalkslate
+ColorForeground=#COLOUR-FG-LOWER
+ColorBackground=#COLOUR-BG-LOWER
+ColorPalette=#COLOUR-0-LOWER;#COLOUR-1-LOWER;#COLOUR-2-LOWER;#COLOUR-3-LOWER;#COLOUR-4-LOWER;#COLOUR-5-LOWER;#COLOUR-6-LOWER;#COLOUR-7-LOWER;#COLOUR-8-LOWER;#COLOUR-9-LOWER;#COLOUR-10-LOWER;#COLOUR-11-LOWER;#COLOUR-12-LOWER;#COLOUR-13-LOWER;#COLOUR-14-LOWER;#COLOUR-15-LOWER
+----
+
+. Go to the Xfce Terminal > Edit > Preferences... > Colors > Presets > Load Presets... and select the entry named Chalkslate.

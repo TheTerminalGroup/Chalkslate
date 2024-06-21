@@ -1,0 +1,41 @@
+## name: Chalkslate
+## upstream: https://github.com/TheTerminalGroup/Chalkslate
+
+#: The basic colors
+
+foreground              #COLOUR-FG-LOWER
+background              #COLOUR-BG-LOWER
+
+#: The basic 16 colors
+
+#: black
+color0                  #COLOUR-0-LOWER
+color8                  #COLOUR-8-LOWER
+
+#: red
+color1                  #COLOUR-1-LOWER
+color9                  #COLOUR-9-LOWER
+
+#: green
+color2                  #COLOUR-2-LOWER
+color10                 #COLOUR-10-LOWER
+
+#: yellow
+color3                  #COLOUR-3-LOWER
+color11                 #COLOUR-11-LOWER
+
+#: blue
+color4                  #COLOUR-4-LOWER
+color12                 #COLOUR-12-LOWER
+
+#: magenta
+color5                  #COLOUR-5-LOWER
+color13                 #COLOUR-13-LOWER
+
+#: cyan
+color6                  #COLOUR-6-LOWER
+color14                 #COLOUR-14-LOWER
+
+#: white
+color7                  #COLOUR-7-LOWER
+color15                 #COLOUR-15-LOWER

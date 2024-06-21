@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!-- Chalkslate -->
+<!-- https://github.com/TheTerminalGroup/Chalkslate -->
+<dict>
+	<key>Ansi 0 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-0-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-0-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-0-R_NORM</real>
+	</dict>
+	<key>Ansi 1 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-1-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-1-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-1-R_NORM</real>
+	</dict>
+	<key>Ansi 10 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-10-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-10-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-10-R_NORM</real>
+	</dict>
+	<key>Ansi 11 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-11-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-11-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-11-R_NORM</real>
+	</dict>
+	<key>Ansi 12 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-12-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-12-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-12-R_NORM</real>
+	</dict>
+	<key>Ansi 13 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-13-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-13-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-13-R_NORM</real>
+	</dict>
+	<key>Ansi 14 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-14-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-14-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-14-R_NORM</real>
+	</dict>
+	<key>Ansi 15 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-15-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-15-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-15-R_NORM</real>
+	</dict>
+	<key>Ansi 2 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-2-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-2-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-2-R_NORM</real>
+	</dict>
+	<key>Ansi 3 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-3-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-3-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-3-R_NORM</real>
+	</dict>
+	<key>Ansi 4 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-4-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-4-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-4-R_NORM</real>
+	</dict>
+	<key>Ansi 5 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-5-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-5-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-5-R_NORM</real>
+	</dict>
+	<key>Ansi 6 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-6-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-6-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-6-R_NORM</real>
+	</dict>
+	<key>Ansi 7 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-7-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-7-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-7-R_NORM</real>
+	</dict>
+	<key>Ansi 8 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-8-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-8-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-8-R_NORM</real>
+	</dict>
+	<key>Ansi 9 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-9-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-9-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-9-R_NORM</real>
+	</dict>
+	<key>Background Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-BG-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-BG-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-BG-R_NORM</real>
+	</dict>
+	<key>Foreground Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>COLOUR-FG-B_NORM</real>
+		<key>Green Component</key>
+		<real>COLOUR-FG-G_NORM</real>
+		<key>Red Component</key>
+		<real>COLOUR-FG-R_NORM</real>
+	</dict>
+</dict>
+</plist>

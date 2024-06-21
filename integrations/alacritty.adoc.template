@@ -1,0 +1,49 @@
+== Alacritty
+
+. Create a directory:
++
+----
+$ mkdir -p ~/.local/share/alacritty/themes
+----
+
+. Within this directory, create a file named `chalkslate.toml` with the following contents:
++
+[source,toml]
+----
+# Chalkslate
+# https://github.com/TheTerminalGroup/Chalkslate
+
+[colors.primary]
+background = '#COLOUR-BG'
+foreground = '#COLOUR-FG'
+
+[colors.normal]
+black = '#COLOUR-0'
+red = '#COLOUR-1'
+green = '#COLOUR-2'
+yellow = '#COLOUR-3'
+blue = '#COLOUR-4'
+magenta = '#COLOUR-5'
+cyan = '#COLOUR-6'
+white = '#COLOUR-7'
+
+[colors.bright]
+black = '#COLOUR-8'
+red = '#COLOUR-9'
+green = '#COLOUR-10'
+yellow = '#COLOUR-11'
+blue = '#COLOUR-12'
+magenta = '#COLOUR-13'
+cyan = '#COLOUR-14'
+white = '#COLOUR-15'
+----
+
+. Add an import to your Alacritty configuration file, `alacritty.toml`:
++
+[source,toml]
+----
+import = [
+	...,
+	"~/.local/share/alacritty/themes/chalkslate.toml"
+]
+----

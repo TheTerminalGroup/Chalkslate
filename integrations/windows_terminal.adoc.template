@@ -1,0 +1,75 @@
+== Windows Terminal
+
+. Open your `settings.json` file.
+
+. Scan through this file until you find the part that looks like:
++
+[source,json]
+----
+{
+    ...,
+    "name": "Command Prompt",
+    "commandline": "cmd.exe",
+    "hidden": false,
+    ...
+}
+----
+
+. Edit this part so that it looks like:
++
+[source,json]
+----
+{
+    ...,
+    "name": "Command Prompt",
+    "commandline": "cmd.exe",
+    "hidden": false,
+    "colorScheme": "Chalkslate",
+    ...
+}
+----
+
+. Scan through the file again, until you find the part that looks like:
++
+[source,json]
+----
+...
+"schemes": [
+    ...
+],
+...
+----
+
+. Add an entry here, as follows:
++
+[source,json]
+----
+...
+"schemes": [
+    ...,
+    {
+        "name": "Chalkslate",
+
+        "background": "#COLOUR-BG",
+        "foreground": "#COLOUR-FG",
+
+        "black": "#COLOUR-0",
+        "red": "#COLOUR-1",
+        "green": "#COLOUR-2",
+        "yellow": "#COLOUR-3",
+        "blue": "#COLOUR-4",
+        "purple": "#COLOUR-5",
+        "cyan": "#COLOUR-6",
+        "white": "#COLOUR-7",
+        "brightBlack": "#COLOUR-8",
+        "brightRed": "#COLOUR-9",
+        "brightGreen": "#COLOUR-10",
+        "brightYellow": "#COLOUR-11",
+        "brightBlue": "#COLOUR-12",
+        "brightPurple": "#COLOUR-13",
+        "brightCyan": "#COLOUR-14",
+        "brightWhite": "#COLOUR-15"
+    }
+],
+...
+----

@@ -1,0 +1,25 @@
+# Chalkslate
+# https://github.com/TheTerminalGroup/Chalkslate
+---
+name: 'Chalkslate'
+
+color_01: '#COLOUR-0'	# Black (Host)
+color_02: '#COLOUR-1'	# Red (Syntax string)
+color_03: '#COLOUR-2'	# Green (Command)
+color_04: '#COLOUR-3'	# Yellow (Command second)
+color_05: '#COLOUR-4'	# Blue (Path)
+color_06: '#COLOUR-5'	# Magenta (Syntax var)
+color_07: '#COLOUR-6'	# Cyan (Prompt)
+color_08: '#COLOUR-7'	# White
+
+color_09: '#COLOUR-8'	# Bright Black
+color_10: '#COLOUR-9'	# Bright Red (Command error)
+color_11: '#COLOUR-10'	# Bright Green (Exec)
+color_12: '#COLOUR-11'	# Bright Yellow
+color_13: '#COLOUR-12'	# Bright Blue (Folder)
+color_14: '#COLOUR-13'	# Bright Magenta
+color_15: '#COLOUR-14'	# Bright Cyan
+color_16: '#COLOUR-15'	# Bright White
+
+background: '#COLOUR-BG'	# Background
+foreground: '#COLOUR-FG'	# Foreground (Text)
