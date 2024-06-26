@@ -1,0 +1,161 @@
+= Integrations
+:toc: preamble
+:toc-title: Terminals
+
+To set up Chalkslate on your terminal, search for your terminal within the list below and follow the given instructions.
+
+== Alacritty
+
+. Create a directory:
++
+----
+$ mkdir -p ~/.local/share/alacritty/themes
+----
+
+. Within this directory, create a file named `chalkslate.toml` with the following contents:
++
+[source,toml]
+----
+# Chalkslate
+# https://github.com/TheTerminalGroup/Chalkslate
+
+[colors.primary]
+background = '#555555'
+foreground = '#FFFFFF'
+
+[colors.normal]
+black = '#000000'
+red = '#FF8484'
+green = '#99CC30'
+yellow = '#FF7744'
+blue = '#6E92F7'
+magenta = '#CC68CC'
+cyan = '#33CFBB'
+white = '#CCCCCC'
+
+[colors.bright]
+black = '#555555'
+red = '#FF9978'
+green = '#58FF00'
+yellow = '#FFFF1A'
+blue = '#30CAFF'
+magenta = '#FF6AF4'
+cyan = '#66FFDD'
+white = '#FFFFFF'
+----
+
+. Add an import to your Alacritty configuration file, `alacritty.toml`:
++
+[source,toml]
+----
+import = [
+	...,
+	"~/.local/share/alacritty/themes/chalkslate.toml"
+]
+----
+
+== Kitty
+
+Use the `themes` kitten:
+
+	$ kitty +kitten themes
+
+You should find Chalkslate among the listed themes.
+
+== Windows Terminal
+
+. Open your `settings.json` file.
+
+. Scan through this file until you find the part that looks like:
++
+[source,json]
+----
+{
+    ...,
+    "name": "Command Prompt",
+    "commandline": "cmd.exe",
+    "hidden": false,
+    ...
+}
+----
+
+. Edit this part so that it looks like:
++
+[source,json]
+----
+{
+    ...,
+    "name": "Command Prompt",
+    "commandline": "cmd.exe",
+    "hidden": false,
+    "colorScheme": "Chalkslate",
+    ...
+}
+----
+
+. Scan through the file again, until you find the part that looks like:
++
+[source,json]
+----
+...
+"schemes": [
+    ...
+],
+...
+----
+
+. Add an entry here, as follows:
++
+[source,json]
+----
+...
+"schemes": [
+    ...,
+    {
+        "name": "Chalkslate",
+
+        "background": "#555555",
+        "foreground": "#FFFFFF",
+
+        "black": "#000000",
+        "red": "#FF8484",
+        "green": "#99CC30",
+        "yellow": "#FF7744",
+        "blue": "#6E92F7",
+        "purple": "#CC68CC",
+        "cyan": "#33CFBB",
+        "white": "#CCCCCC",
+        "brightBlack": "#555555",
+        "brightRed": "#FF9978",
+        "brightGreen": "#58FF00",
+        "brightYellow": "#FFFF1A",
+        "brightBlue": "#30CAFF",
+        "brightPurple": "#FF6AF4",
+        "brightCyan": "#66FFDD",
+        "brightWhite": "#FFFFFF"
+    }
+],
+...
+----
+
+== Xfce Terminal
+
+. Create a directory:
++
+----
+$ mkdir -p ~/.local/share/xfce4/terminal/colorschemes
+----
+
+. Within this directory, create a file named `chalkslate.theme` with the following contents:
++
+----
+# Chalkslate
+# https://github.com/TheTerminalGroup/Chalkslate
+[Scheme]
+Name=Chalkslate
+ColorForeground=#ffffff
+ColorBackground=#555555
+ColorPalette=#000000;#ff8484;#99cc30;#ff7744;#6e92f7;#cc68cc;#33cfbb;#cccccc;#555555;#ff9978;#58ff00;#ffff1a;#30caff;#ff6af4;#66ffdd;#ffffff
+----
+
+. Go to the Xfce Terminal > Edit > Preferences... > Colors > Presets > Load Presets... and select the entry named Chalkslate.

@@ -1,0 +1,19 @@
+#!/usr/bin/perl -wp
+
+BEGIN {
+	@ARGV = ('docs/integrations.adoc.header');
+}
+
+# The -p option automatically prints out the header matter.
+
+END {
+	foreach $filename ( <integrations/*.template> ) {
+
+		# Print a newline between the header matter and the first integration,
+		# and between successive integrations.
+		# This does not leave a newline after the last integration.
+		print "\n";
+
+		system "src/fill-integration-template $filename";
+	}
+}
