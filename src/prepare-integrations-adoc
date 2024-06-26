@@ -10,7 +10,7 @@ END {
 
 	# Globbing automatically produces filenames in alphabetically sorted order
 	# so there's no need for us to sort them explicitly.
-	foreach $filename ( <integrations/*.template> ) {
+	foreach $filename ( <integrations/*.adoc.template> ) {
 
 		# Print a newline between the header matter and the first integration,
 		# and between successive integrations.
