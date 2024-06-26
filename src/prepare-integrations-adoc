@@ -7,6 +7,9 @@ BEGIN {
 # The -p option automatically prints out the header matter.
 
 END {
+
+	# Globbing automatically produces filenames in alphabetically sorted order
+	# so there's no need for us to sort them explicitly.
 	foreach $filename ( <integrations/*.template> ) {
 
 		# Print a newline between the header matter and the first integration,
